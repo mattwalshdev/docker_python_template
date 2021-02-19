@@ -1,6 +1,6 @@
 # Docker - Python Template
 ### Basic template for a single use python script based in Docker
-This package lets the user build and run a Python script in Docker.
+This package lets the user build and run a Python script in Docker.  
 Most examples I've found involve service runtimes eg. Flask or a database, but this package lets you build and run simple scripts with Docker and docker-compose.
 
 It runs in a Python venv so if you want to work on the project, sans Docker it will run exactly the same.
@@ -19,36 +19,36 @@ It runs in a Python venv so if you want to work on the project, sans Docker it w
 
 
 ## How to run DEV
-This will mount a volume on the container, so all changes are automatically available without a rebuild
+This will mount a volume on the container, so all changes are automatically available without a rebuild.
 
-To run the default program
-`docker-compose -f docker-compose.dev.yml run --rm app-dev`
-To run any other file in the application
-`docker-compose -f docker-compose.dev.yml run --rm app-dev other.py`
+To run the default program  
+`docker-compose -f docker-compose.dev.yml run --rm app-dev`  
+To run any other file in the application  
+`docker-compose -f docker-compose.dev.yml run --rm app-dev other.py`  
 
 
 ## How to run PROD
-This will build without a volume mount and uses the default docker-compose.yml file
+This will build without a volume mount and uses the default docker-compose.yml file.
 
-To run the default program
-`docker-compose run --rm app`
-To run any other file in the application
-`docker-compose run --rm app other.py`
+To run the default program  
+`docker-compose run --rm app`  
+To run any other file in the application  
+`docker-compose run --rm app other.py`  
 
-If you want to update the contents of the PROD container
+If you want to update the contents of the PROD container  
 `docker-compose build`
 
 
 ## Running without Docker
-cd to top level app dir
-`python3 -m venv venv`
-`source venv/bin/activate`
-`pip install --upgrade pip`
-`pip install --upgrade setuptools`
-`pip uninstall -y pkg-resources` (Ubuntu only bug)
-For development and testing
-`pip install -r requirements.dev.txt`
-For production
-`pip install -r requirements.txt`
+cd to top level app dir  
+`python3 -m venv venv`  
+`source venv/bin/activate`  
+`pip install --upgrade pip`  
+`pip install --upgrade setuptools`  
+`pip uninstall -y pkg-resources` (Ubuntu only bug)  
+For development and testing  
+`pip install -r requirements.dev.txt`  
+For production  
+`pip install -r requirements.txt`  
 
-____:seedling:_:seedling:_:seedling:_:seedling:_:seedling:____
+:seedling: :seedling: :seedling: :seedling: :seedling:
