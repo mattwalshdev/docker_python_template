@@ -1,3 +1,3 @@
 import pytest
 
-print("testing!")
+print("testing")
