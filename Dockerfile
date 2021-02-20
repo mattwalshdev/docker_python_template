@@ -19,7 +19,6 @@ RUN pip install --upgrade setuptools
 COPY requirements.txt .
 COPY requirements.dev.txt .
 RUN if [ "$ENVIR" = "PROD" ] ; then pip install -r requirements.txt ; else pip install -r requirements.dev.txt ; fi
-#RUN pip install -r requirements.txt
 
 COPY . .
 
