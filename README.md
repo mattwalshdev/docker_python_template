@@ -46,7 +46,8 @@ cd to top level app dir
 `python3 -m venv .venv`  
 `source .venv/bin/activate`  
 `pip install --upgrade pip`  
-`pip install --upgrade setuptools`  
+`pip install --upgrade setuptools`
+`pip install wheel`  
 `pip uninstall -y pkg-resources` (Ubuntu only bug)  
 For development and testing  
 `pip install -r requirements.dev.txt`  
