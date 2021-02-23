@@ -1,7 +1,7 @@
 FROM python:alpine
 
 ARG ENVIR
-ARG VENV_PATH=/opt/venv
+ARG VENV_PATH=/opt/.venv
 ARG APP_DIR=/usr/src/app/docker_python_template
 
 WORKDIR /usr/src/app

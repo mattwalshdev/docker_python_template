@@ -10,7 +10,7 @@ It runs in a Python venv so if you want to work on the project, sans Docker it w
 1. rename docker_python_template folder to your app name
 2. if you wish to rename the defaut run file from main.py do so now
 3. Open Dockerfile and edit the below
-   - `ARG VENV_PATH=/opt/venv` (if you want to change venv folder)
+   - `ARG VENV_PATH=/opt/.venv` (if you want to change venv folder)
    - `ARG APP_DIR=/usr/src/app/docker_python_template` (update app location)
    - `WORKDIR /usr/src/app` (if you changed the apps root folder structure above)
    - `#RUN apk add --no-cache gcc musl-dev linux-headers` (uncomment if Alpine Linux doesn't properly load certain pip libraries)
@@ -37,12 +37,14 @@ To run any other file in the application
 
 If you want to update the contents of the PROD container  
 `docker-compose build`
+If you want to update the root contents of the DEV container (the app source folder is already mounted) 
+`docker-compose -f docker-compose.dev.yml build`
 
 
 ## Running without Docker
 cd to top level app dir  
-`python3 -m venv venv`  
-`source venv/bin/activate`  
+`python3 -m venv .venv`  
+`source .venv/bin/activate`  
 `pip install --upgrade pip`  
 `pip install --upgrade setuptools`  
 `pip uninstall -y pkg-resources` (Ubuntu only bug)  
